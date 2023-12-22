@@ -1,0 +1,391 @@
+
+<!-- saved from url=(0114)file:///C:/Users/Excal%C4%B1bur/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/project/Untitled-1.html#/?_k=xcqi4m -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>BAYBARS</title>
+    <script data-require="react@*" data-semver="15.5.0" src="./BAYBARS_files/react.min.js.indir"></script>
+    <script data-require="react@*" data-semver="15.5.0" src="./BAYBARS_files/react-dom.min.js.indir"></script>
+    <script data-require="babel@*" data-semver="6.25.0" src="./BAYBARS_files/babel.min.js.indir"></script>
+    <script data-require="react-router@*" data-semver="2.5.2" src="./BAYBARS_files/ReactRouter.min.js.indir"></script>
+    <script data-require="react-router@*" data-semver="2.5.2" src="./BAYBARS_files/History.min.js.indir"></script>
+    <link rel="stylesheet" href="file:///C:/Users/Excal%C4%B1bur/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/project/style.css">
+    <script src="file:///C:/Users/Excal%C4%B1bur/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/project/script.js"></script>
+    <style>
+      body {
+        background-color: #881845;
+        /*background-color: #0e2439;*/
+        padding: 20px;
+        margin: 0;
+      }
+      h1, h2, p, ul, li {
+        /*color:#7c97b3;*/
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      ul.header li {
+        display: inline;
+        list-style-type: none;
+        margin: 0;
+      }
+      ul.header {
+        background-color: #111;
+        padding: 0;
+      }
+      ul.header li a {
+        color: #FFF;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 20px;
+        display: inline-block;
+      }
+      .content {
+        background-color: #ccb5b5;
+        padding: 20px;
+        border-radius:5px;
+      }
+      .content h2 {
+        padding: 0;
+        margin: 0;
+      }
+      .content li {
+        margin-bottom: 10px;
+      }
+      .active {
+        background-color: #0099FF;
+      }
+    </style>
+  <script>"use strict";
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _ReactRouter = ReactRouter,
+    Router = _ReactRouter.Router,
+    Route = _ReactRouter.Route,
+    IndexRoute = _ReactRouter.IndexRoute,
+    IndexLink = _ReactRouter.IndexLink,
+    hashHistory = _ReactRouter.hashHistory,
+    Link = _ReactRouter.Link;
+
+//App Component
+
+var App = function (_React$Component) {
+  _inherits(App, _React$Component);
+
+  function App() {
+    _classCallCheck(this, App);
+
+    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+  }
+
+  _createClass(App, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "h1",
+          null,
+          "React SPA"
+        ),
+        React.createElement(
+          "ul",
+          { className: "header" },
+          React.createElement(
+            "li",
+            null,
+            React.createElement(
+              IndexLink,
+              { to: "/", activeClassName: "active" },
+              "My Home"
+            )
+          ),
+          React.createElement(
+            "li",
+            null,
+            React.createElement(
+              Link,
+              { to: "/contact", activeClassName: "active" },
+              "Contact"
+            )
+          ),
+          React.createElement(
+            "li",
+            null,
+            React.createElement(
+              Link,
+              { to: "/social", activeClassName: "active" },
+              "Social"
+            )
+          )
+        ),
+        React.createElement(
+          "div",
+          { className: "content" },
+          this.props.children
+        )
+      );
+    }
+  }]);
+
+  return App;
+}(React.Component);
+
+;
+
+//Home Component
+
+var Home = function (_React$Component2) {
+  _inherits(Home, _React$Component2);
+
+  function Home() {
+    _classCallCheck(this, Home);
+
+    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
+  }
+
+  _createClass(Home, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "p",
+          null,
+          "I am a software engineer student currently living in Konya, T\xFCrkiye. My interests range from technology to entrepreneurship. I am also interested in fitness and programming."
+        ),
+        React.createElement("p", null),
+        React.createElement("p", null),
+        React.createElement("p", null)
+      );
+    }
+  }]);
+
+  return Home;
+}(React.Component);
+
+;
+
+var Contact = function (_React$Component3) {
+  _inherits(Contact, _React$Component3);
+
+  function Contact() {
+    _classCallCheck(this, Contact);
+
+    return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
+  }
+
+  _createClass(Contact, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "h2",
+          null,
+          "GOT QUESTIONS?"
+        ),
+        React.createElement(
+          "p",
+          null,
+          "The easiest thing to do is send an email from ",
+          React.createElement(
+            "a",
+            { href: "enverbaybarsay@hmail.com" },
+            "Baybars Ayd\u0131n"
+          ),
+          "."
+        )
+      );
+    }
+  }]);
+
+  return Contact;
+}(React.Component);
+
+;
+
+var Social = function (_React$Component4) {
+  _inherits(Social, _React$Component4);
+
+  function Social() {
+    _classCallCheck(this, Social);
+
+    return _possibleConstructorReturn(this, (Social.__proto__ || Object.getPrototypeOf(Social)).apply(this, arguments));
+  }
+
+  _createClass(Social, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "h2",
+          null,
+          "Social"
+        ),
+        React.createElement(
+          "p",
+          null,
+          "My Social Presence:"
+        ),
+        React.createElement(
+          "ol",
+          null,
+          React.createElement(
+            "li",
+            null,
+            React.createElement(
+              "a",
+              { href: "https://github.com/baybarsay" },
+              "GitHub"
+            )
+          ),
+          React.createElement(
+            "li",
+            null,
+            React.createElement(
+              "a",
+              { href: "https://plnkr.co/" },
+              "Plnkr"
+            )
+          ),
+          React.createElement(
+            "li",
+            null,
+            React.createElement(
+              "a",
+              { href: "https://www.linkedin.com/in/enver-baybars-ayd%C4%B1n-326bb029b/" },
+              "LinkedIn"
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Social;
+}(React.Component);
+
+;
+
+var destination = document.querySelector("#container");
+ReactDOM.render(React.createElement(
+  Router,
+  { history: hashHistory },
+  React.createElement(
+    Route,
+    { path: "/", component: App },
+    React.createElement(IndexRoute, { component: Home }),
+    React.createElement(Route, { path: "contact", component: Contact }),
+    React.createElement(Route, { path: "social", component: Social })
+  )
+), destination);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIklubGluZSBCYWJlbCBzY3JpcHQiXSwibmFtZXMiOlsiUmVhY3RSb3V0ZXIiLCJSb3V0ZXIiLCJSb3V0ZSIsIkluZGV4Um91dGUiLCJJbmRleExpbmsiLCJoYXNoSGlzdG9yeSIsIkxpbmsiLCJBcHAiLCJwcm9wcyIsImNoaWxkcmVuIiwiUmVhY3QiLCJDb21wb25lbnQiLCJIb21lIiwiQ29udGFjdCIsIlNvY2lhbCIsImRlc3RpbmF0aW9uIiwiZG9jdW1lbnQiLCJxdWVyeVNlbGVjdG9yIiwiUmVhY3RET00iLCJyZW5kZXIiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7bUJBTW1CQSxXO0lBTFRDLE0sZ0JBQUFBLE07SUFDQUMsSyxnQkFBQUEsSztJQUNBQyxVLGdCQUFBQSxVO0lBQ0FDLFMsZ0JBQUFBLFM7SUFDQUMsVyxnQkFBQUEsVztJQUNBQyxJLGdCQUFBQSxJOztBQUVOOztJQUNNQyxHOzs7Ozs7Ozs7Ozs2QkFDSTtBQUNOLGFBQ0U7QUFBQTtBQUFBO0FBQ0U7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQURGO0FBRUU7QUFBQTtBQUFBLFlBQUksV0FBVSxRQUFkO0FBQ0U7QUFBQTtBQUFBO0FBQUk7QUFBQyx1QkFBRDtBQUFBLGdCQUFXLElBQUcsR0FBZCxFQUFrQixpQkFBZ0IsUUFBbEM7QUFBQTtBQUFBO0FBQUosV0FERjtBQUVFO0FBQUE7QUFBQTtBQUFJO0FBQUMsa0JBQUQ7QUFBQSxnQkFBTSxJQUFHLFVBQVQsRUFBb0IsaUJBQWdCLFFBQXBDO0FBQUE7QUFBQTtBQUFKLFdBRkY7QUFHRTtBQUFBO0FBQUE7QUFBSTtBQUFDLGtCQUFEO0FBQUEsZ0JBQU0sSUFBRyxTQUFULEVBQW1CLGlCQUFnQixRQUFuQztBQUFBO0FBQUE7QUFBSjtBQUhGLFNBRkY7QUFPRTtBQUFBO0FBQUEsWUFBSyxXQUFVLFNBQWY7QUFFSSxlQUFLQyxLQUFMLENBQVdDO0FBRmY7QUFQRixPQURGO0FBY0Q7Ozs7RUFoQmVDLE1BQU1DLFM7O0FBaUJ2Qjs7QUFFRDs7SUFDTUMsSTs7Ozs7Ozs7Ozs7NkJBQ0k7QUFDTixhQUNFO0FBQUE7QUFBQTtBQUNJO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FESjtBQU9JLHNDQVBKO0FBUUksc0NBUko7QUFXSTtBQVhKLE9BREY7QUFpQkQ7Ozs7RUFuQmdCRixNQUFNQyxTOztBQW9CeEI7O0lBRUtFLE87Ozs7Ozs7Ozs7OzZCQUNJO0FBQ04sYUFDRztBQUFBO0FBQUE7QUFDRDtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBREM7QUFFRDtBQUFBO0FBQUE7QUFBQTtBQUNLO0FBQUE7QUFBQSxjQUFHLE1BQUssMEJBQVI7QUFBQTtBQUFBLFdBREw7QUFBQTtBQUFBO0FBRkMsT0FESDtBQVFEOzs7O0VBVm1CSCxNQUFNQyxTOztBQVczQjs7SUFFS0csTTs7Ozs7Ozs7Ozs7NkJBQ0k7QUFDTixhQUNHO0FBQUE7QUFBQTtBQUNEO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FEQztBQUVEO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FGQztBQUdEO0FBQUE7QUFBQTtBQUNFO0FBQUE7QUFBQTtBQUFJO0FBQUE7QUFBQSxnQkFBRyxNQUFLLDhCQUFSO0FBQUE7QUFBQTtBQUFKLFdBREY7QUFFRTtBQUFBO0FBQUE7QUFBSTtBQUFBO0FBQUEsZ0JBQUcsTUFBSyxtQkFBUjtBQUFBO0FBQUE7QUFBSixXQUZGO0FBR0U7QUFBQTtBQUFBO0FBQUk7QUFBQTtBQUFBLGdCQUFHLE1BQUssaUVBQVI7QUFBQTtBQUFBO0FBQUo7QUFIRjtBQUhDLE9BREg7QUFXRDs7OztFQWJrQkosTUFBTUMsUzs7QUFjMUI7O0FBRUQsSUFBSUksY0FBY0MsU0FBU0MsYUFBVCxDQUF1QixZQUF2QixDQUFsQjtBQUNBQyxTQUFTQyxNQUFULENBQ0U7QUFBQyxRQUFEO0FBQUEsSUFBUSxTQUFTZCxXQUFqQjtBQUNFO0FBQUMsU0FBRDtBQUFBLE1BQU8sTUFBSyxHQUFaLEVBQWdCLFdBQVdFLEdBQTNCO0FBQ0Usd0JBQUMsVUFBRCxJQUFZLFdBQVdLLElBQXZCLEdBREY7QUFFRSx3QkFBQyxLQUFELElBQU8sTUFBSyxTQUFaLEVBQXNCLFdBQVdDLE9BQWpDLEdBRkY7QUFHRSx3QkFBQyxLQUFELElBQU8sTUFBSyxRQUFaLEVBQXFCLFdBQVdDLE1BQWhDO0FBSEY7QUFERixDQURGLEVBU0VDLFdBVEYiLCJmaWxlIjoiSW5saW5lIEJhYmVsIHNjcmlwdCIsInNvdXJjZXNDb250ZW50IjpbIlxuICAgIHZhciB7IFJvdXRlcixcbiAgICAgICAgICBSb3V0ZSxcbiAgICAgICAgICBJbmRleFJvdXRlLFxuICAgICAgICAgIEluZGV4TGluayxcbiAgICAgICAgICBoYXNoSGlzdG9yeSxcbiAgICAgICAgICBMaW5rIH0gPSBSZWFjdFJvdXRlcjtcbiAgICAgICAgICBcbiAgICAvL0FwcCBDb21wb25lbnRcbiAgICBjbGFzcyBBcHAgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnR7XG4gICAgICByZW5kZXIoKXtcbiAgICAgICAgcmV0dXJuKFxuICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICA8aDE+UmVhY3QgU1BBPC9oMT5cbiAgICAgICAgICAgIDx1bCBjbGFzc05hbWU9XCJoZWFkZXJcIj5cbiAgICAgICAgICAgICAgPGxpPjxJbmRleExpbmsgdG89XCIvXCIgYWN0aXZlQ2xhc3NOYW1lPVwiYWN0aXZlXCI+TXkgSG9tZTwvSW5kZXhMaW5rPjwvbGk+XG4gICAgICAgICAgICAgIDxsaT48TGluayB0bz1cIi9jb250YWN0XCIgYWN0aXZlQ2xhc3NOYW1lPVwiYWN0aXZlXCI+Q29udGFjdDwvTGluaz48L2xpPlxuICAgICAgICAgICAgICA8bGk+PExpbmsgdG89XCIvc29jaWFsXCIgYWN0aXZlQ2xhc3NOYW1lPVwiYWN0aXZlXCI+U29jaWFsPC9MaW5rPjwvbGk+XG4gICAgICAgICAgICA8L3VsPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb250ZW50XCI+XG4gICAgICAgICAgICAgIHsvKiBDb250ZW50IGdvZXMgaGVyZSAqL31cbiAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLmNoaWxkcmVufVxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICk7XG4gICAgICB9ICAgICBcbiAgICB9O1xuICAgIFxuICAgIC8vSG9tZSBDb21wb25lbnRcbiAgICBjbGFzcyBIb21lIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50e1xuICAgICAgcmVuZGVyKCl7XG4gICAgICAgIHJldHVybihcbiAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICA8cD5cbiAgICAgICAgICAgICAgICBJIGFtIGEgc29mdHdhcmUgZW5naW5lZXIgc3R1ZGVudCBjdXJyZW50bHkgbGl2aW5nIGluIEtvbnlhLCBUw7xya2l5ZS4gXG4gICAgICAgICAgICAgICAgTXkgaW50ZXJlc3RzIHJhbmdlIGZyb20gdGVjaG5vbG9neSB0byBlbnRyZXByZW5ldXJzaGlwLlxuICAgICAgICAgICAgICAgIEkgYW0gYWxzbyBpbnRlcmVzdGVkIGluIGZpdG5lc3MgYW5kIHByb2dyYW1taW5nLlxuICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgIFxuICAgICAgICAgICAgICA8cD48L3A+XG4gICAgICAgICAgICAgIDxwPlxuICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgIDxwPlxuICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICk7XG4gICAgICB9XG4gICAgfTtcbiAgICBcbiAgICBjbGFzcyBDb250YWN0IGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50e1xuICAgICAgcmVuZGVyKCl7XG4gICAgICAgIHJldHVybihcbiAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICA8aDI+R09UIFFVRVNUSU9OUz88L2gyPlxuICAgICAgICAgIDxwPlRoZSBlYXNpZXN0IHRoaW5nIHRvIGRvIGlzIHNlbmQgYW4gZW1haWxcbiAgICAgICAgICBmcm9tIDxhIGhyZWY9XCJlbnZlcmJheWJhcnNheUBobWFpbC5jb21cIj5CYXliYXJzIEF5ZMSxbjwvYT4uXG4gICAgICAgICAgPC9wPlxuICAgICAgICA8L2Rpdj5cbiAgICAgICAgKTtcbiAgICAgIH1cbiAgICB9O1xuICAgIFxuICAgIGNsYXNzIFNvY2lhbCBleHRlbmRzIFJlYWN0LkNvbXBvbmVudHtcbiAgICAgIHJlbmRlcigpe1xuICAgICAgICByZXR1cm4oXG4gICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgPGgyPlNvY2lhbDwvaDI+XG4gICAgICAgICAgPHA+TXkgU29jaWFsIFByZXNlbmNlOjwvcD5cbiAgICAgICAgICA8b2w+XG4gICAgICAgICAgICA8bGk+PGEgaHJlZj1cImh0dHBzOi8vZ2l0aHViLmNvbS9iYXliYXJzYXlcIj5HaXRIdWI8L2E+PC9saT5cbiAgICAgICAgICAgIDxsaT48YSBocmVmPVwiaHR0cHM6Ly9wbG5rci5jby9cIj5QbG5rcjwvYT48L2xpPlxuICAgICAgICAgICAgPGxpPjxhIGhyZWY9XCJodHRwczovL3d3dy5saW5rZWRpbi5jb20vaW4vZW52ZXItYmF5YmFycy1heWQlQzQlQjFuLTMyNmJiMDI5Yi9cIj5MaW5rZWRJbjwvYT48L2xpPlxuICAgICAgICAgICAgPC9vbD5cbiAgICAgICAgPC9kaXY+XG4gICAgICAgICk7XG4gICAgICB9XG4gICAgfTtcbiAgICBcbiAgICB2YXIgZGVzdGluYXRpb24gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiI2NvbnRhaW5lclwiKTtcbiAgICBSZWFjdERPTS5yZW5kZXIoXG4gICAgICA8Um91dGVyIGhpc3Rvcnk9e2hhc2hIaXN0b3J5fT5cbiAgICAgICAgPFJvdXRlIHBhdGg9XCIvXCIgY29tcG9uZW50PXtBcHB9PlxuICAgICAgICAgIDxJbmRleFJvdXRlIGNvbXBvbmVudD17SG9tZX0vPlxuICAgICAgICAgIDxSb3V0ZSBwYXRoPVwiY29udGFjdFwiIGNvbXBvbmVudD17Q29udGFjdH0gLz5cbiAgICAgICAgICA8Um91dGUgcGF0aD1cInNvY2lhbFwiIGNvbXBvbmVudD17U29jaWFsfSAvPlxuICAgICAgICA8L1JvdXRlPlxuICAgICAgPC9Sb3V0ZXI+XG4gICAgICAsXG4gICAgICBkZXN0aW5hdGlvblxuICAgICk7XG4gICAiXX0=</script></head>
+
+  <body>
+    <div id="container"><div data-reactroot=""><h1>React SPA</h1><ul class="header"><li><a href="file:///C:/Users/Excal%C4%B1bur/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/project/Untitled-1.html#/" class="active">My Home</a></li><li><a href="file:///C:/Users/Excal%C4%B1bur/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/project/Untitled-1.html#/contact">Contact</a></li><li><a href="file:///C:/Users/Excal%C4%B1bur/OneDrive/Masa%C3%BCst%C3%BC/Yeni%20klas%C3%B6r/project/Untitled-1.html#/social">Social</a></li></ul><div class="content"><div><p>I am a software engineer student currently living in Konya, Türkiye. My interests range from technology to entrepreneurship. I am also interested in fitness and programming.</p><p></p><p></p><p></p></div></div></div></div>
+    <script type="text/babel">
+    var { Router,
+          Route,
+          IndexRoute,
+          IndexLink,
+          hashHistory,
+          Link } = ReactRouter;
+          
+    //App Component
+    class App extends React.Component{
+      render(){
+        return(
+          <div>
+            <h1>React SPA</h1>
+            <ul className="header">
+              <li><IndexLink to="/" activeClassName="active">My Home</IndexLink></li>
+              <li><Link to="/contact" activeClassName="active">Contact</Link></li>
+              <li><Link to="/social" activeClassName="active">Social</Link></li>
+            </ul>
+            <div className="content">
+              {/* Content goes here */}
+               {this.props.children}
+            </div>
+          </div>
+        );
+      }     
+    };
+    
+    //Home Component
+    class Home extends React.Component{
+      render(){
+        return(
+          <div>
+              <p>
+                I am a software engineer student currently living in Konya, Türkiye. 
+                My interests range from technology to entrepreneurship.
+                I am also interested in fitness and programming.
+              </p>
+              
+              <p></p>
+              <p>
+                
+              </p>
+              <p>
+                
+              </p>
+          </div>
+        );
+      }
+    };
+    
+    class Contact extends React.Component{
+      render(){
+        return(
+           <div>
+          <h2>GOT QUESTIONS?</h2>
+          <p>The easiest thing to do is send an email
+          from <a href="enverbaybarsay@hmail.com">Baybars Aydın</a>.
+          </p>
+        </div>
+        );
+      }
+    };
+    
+    class Social extends React.Component{
+      render(){
+        return(
+           <div>
+          <h2>Social</h2>
+          <p>My Social Presence:</p>
+          <ol>
+            <li><a href="https://github.com/baybarsay">GitHub</a></li>
+            <li><a href="https://plnkr.co/">Plnkr</a></li>
+            <li><a href="https://www.linkedin.com/in/enver-baybars-ayd%C4%B1n-326bb029b/">LinkedIn</a></li>
+            </ol>
+        </div>
+        );
+      }
+    };
+    
+    var destination = document.querySelector("#container");
+    ReactDOM.render(
+      <Router history={hashHistory}>
+        <Route path="/" component={App}>
+          <IndexRoute component={Home}/>
+          <Route path="contact" component={Contact} />
+          <Route path="social" component={Social} />
+        </Route>
+      </Router>
+      ,
+      destination
+    );
+   </script>
+  
+
+
+</body></html>
